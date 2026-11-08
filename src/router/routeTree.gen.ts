@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './../routes/index'
 import { Route as AboutRouteImport } from './../routes/about'
 import { Route as ContactsRouteImport } from './../routes/contacts'
 import { Route as DashboardRouteImport } from './../routes/dashboard'
+import { Route as LoginRouteImport } from './../routes/login'
 import { Route as PriceListRouteImport } from './../routes/price-list'
 import { Route as QuestionRouteImport } from './../routes/question'
 
@@ -36,6 +37,11 @@ const DashboardRoute = DashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PriceListRoute = PriceListRouteImport.update({
   id: '/price-list',
   path: '/price-list',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contacts': typeof ContactsRoute
   '/dashboard': typeof DashboardRoute
+  '/login': typeof LoginRoute
   '/price-list': typeof PriceListRoute
   '/question': typeof QuestionRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contacts': typeof ContactsRoute
   '/dashboard': typeof DashboardRoute
+  '/login': typeof LoginRoute
   '/price-list': typeof PriceListRoute
   '/question': typeof QuestionRoute
 }
@@ -69,21 +77,36 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contacts': typeof ContactsRoute
   '/dashboard': typeof DashboardRoute
+  '/login': typeof LoginRoute
   '/price-list': typeof PriceListRoute
   '/question': typeof QuestionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/contacts' | '/dashboard' | '/price-list' | '/question'
+    | '/'
+    | '/about'
+    | '/contacts'
+    | '/dashboard'
+    | '/login'
+    | '/price-list'
+    | '/question'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contacts' | '/dashboard' | '/price-list' | '/question'
+  to:
+    | '/'
+    | '/about'
+    | '/contacts'
+    | '/dashboard'
+    | '/login'
+    | '/price-list'
+    | '/question'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contacts'
     | '/dashboard'
+    | '/login'
     | '/price-list'
     | '/question'
   fileRoutesById: FileRoutesById
@@ -93,6 +116,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactsRoute: typeof ContactsRoute
   DashboardRoute: typeof DashboardRoute
+  LoginRoute: typeof LoginRoute
   PriceListRoute: typeof PriceListRoute
   QuestionRoute: typeof QuestionRoute
 }
@@ -127,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/price-list': {
       id: '/price-list'
       path: '/price-list'
@@ -149,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactsRoute: ContactsRoute,
   DashboardRoute: DashboardRoute,
+  LoginRoute: LoginRoute,
   PriceListRoute: PriceListRoute,
   QuestionRoute: QuestionRoute,
 }
