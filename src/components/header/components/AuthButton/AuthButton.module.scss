@@ -1,0 +1,25 @@
+.authButton {
+  display: flex;
+  background: linear-gradient(127.76deg, #EEC595 -6.01%, #F1804F 55.63%, #EDD098 112.93%);
+  gap: 12px;
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: #ffffff;
+  font-family: 'Inter', 'sans-serif';
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(241, 128, 79, 0.3);
+    filter: brightness(1.05);
+  }
+
+  &:active {
+    box-shadow: 0 2px 5px rgba(241, 128, 79, 0.2);
+    filter: brightness(0.95);
+  }
+}
+
+.verticalLine {
+  background-color: #ffffff;
+  width: 1px;
+}

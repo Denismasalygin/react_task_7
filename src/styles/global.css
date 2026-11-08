@@ -19,6 +19,12 @@ body {
 button,
 input,
 textarea,
-select {
+select,
+link {
   font: inherit;
+  transition: all 0.2s ease;
+}
+
+button {
+  cursor: pointer;
 }

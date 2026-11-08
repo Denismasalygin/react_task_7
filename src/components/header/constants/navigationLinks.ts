@@ -1,15 +1,16 @@
-import type {ToOptions} from '@tanstack/react-router'
+import type { ToOptions } from '@tanstack/react-router'
 
 interface NavigationLink {
     label: string
     to: ToOptions['to']
 }
 
+export const homeLink: NavigationLink = {
+    label: 'TipMinder',
+    to: '/',
+}
+
 export const navigationLinks: NavigationLink[] = [
-    {
-        label: 'Главная',
-        to: '/',
-    },
     {
         label: 'О нас',
         to: '/about',
