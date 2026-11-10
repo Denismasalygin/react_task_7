@@ -4,10 +4,10 @@
   align-items: center;
   width: 100%;
   padding: 12px 32px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #C0C0C0;
-  font-size: 16px;
-  font-family: 'Inter', 'sans-serif';
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-md);
+  font-family: var(--font-family-base), 'sans-serif';
 }
 
 .left {
@@ -15,8 +15,8 @@
   align-items: center;
   gap: 12px;
   justify-self: start;
-  color: #121212;
-  font-weight: 600;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
 }
 
 .center {
@@ -25,8 +25,8 @@
   justify-content: center;
   gap: 32px;
 
-  color: #2C2C2C;
-  font-weight: 500;
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
 }
 
 .right {

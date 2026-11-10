@@ -1,17 +1,17 @@
 .link {
   color: inherit;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
 
   &:hover {
-    color: #FFB682;
+    color: var(--color-link-hover);
   }
 
   &:active {
-    color: #FB8F42;
+    color: var(--color-link-active);
   }
 }
 
 .active {
-  color: #FB8F42;
+  color: var(--color-link-active);
 }
