@@ -1,5 +1,5 @@
-import { Link } from '@tanstack/react-router'
 import { AuthButton } from '../AuthButton/AuthButton'
+import { NavigationLink } from '../NavigationLink/NavigationLink'
 import { homeLink, navigationLinks } from '../../constants/navigationLinks'
 import styles from './DesktopHeader.module.scss'
 
@@ -12,25 +12,19 @@ export function DesktopHeader() {
                     alt=""
                 />
 
-                <Link
+                <NavigationLink
                     to={homeLink.to}
-                    className={styles.link}
-                    activeProps={{ className: styles.active }}
-                >
-                    {homeLink.label}
-                </Link>
+                    label={homeLink.label}
+                />
             </div>
 
             <nav className={styles.center} aria-label="Основная навигация">
                 {navigationLinks.map(({ to, label }) => (
-                    <Link
+                    <NavigationLink
                         key={to}
                         to={to}
-                        className={styles.link}
-                        activeProps={{ className: styles.active }}
-                    >
-                        {label}
-                    </Link>
+                        label={label}
+                    />
                 ))}
             </nav>
 

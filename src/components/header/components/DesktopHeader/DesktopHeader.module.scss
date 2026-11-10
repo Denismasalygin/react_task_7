@@ -32,19 +32,3 @@
 .right {
   justify-self: end;
 }
-
-.link {
-  transition: all 0.2s ease;
-
-  &:hover {
-    color: #FFB682;
-  }
-
-  &:active {
-    color: #FB8F42;
-  }
-}
-
-.active {
-  color: #FB8F42;
-}
