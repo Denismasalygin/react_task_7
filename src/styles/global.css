@@ -19,8 +19,7 @@ body {
 button,
 input,
 textarea,
-select,
-link {
+select {
   font: inherit;
   transition: all 0.2s ease;
 }

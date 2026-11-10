@@ -5,7 +5,7 @@ import {
     useNavigate,
 } from '@tanstack/react-router'
 
-import {Header} from '../components/header/components/Header/Header'
+import {Header} from '../components/header/Header.tsx'
 
 export const Route = createRootRoute({
     component: RootComponent,
