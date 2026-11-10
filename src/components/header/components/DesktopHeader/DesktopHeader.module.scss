@@ -1,0 +1,34 @@
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  padding: 12px 32px;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-md);
+  font-family: var(--font-family-base), 'sans-serif';
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-self: start;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.right {
+  justify-self: end;
+}

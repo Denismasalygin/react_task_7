@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+:root {
+  /* Colors — text */
+  --color-text-inverse: #FFFFFF;
+  --color-text-primary: #121212;
+  --color-text-secondary: #2C2C2C;
+
+  /* Colors — background */
+  --color-background: #FFFFFF;
+  --color-background-hover: #FFF3E9;
+  --color-background-overlay: rgba(0, 0, 0, 0.35);
+
+  /* Colors — border */
+  --color-border: #C0C0C0;
+
+  /* Colors — links */
+  --color-link-hover: #FFB682;
+  --color-link-active: #FB8F42;
+
+  /* Typography — font size */
+  --font-size-md: 16px;
+
+  /* Typography — font family */
+  --font-family-base: 'Inter', sans-serif;
+
+  /* Typography — font weight */
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+
+  /* Effects */
+  --transition-fast: 0.2s ease;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,4 +53,9 @@ input,
 textarea,
 select {
   font: inherit;
+  transition: all 0.2s ease;
+}
+
+button {
+  cursor: pointer;
 }
