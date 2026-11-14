@@ -1,8 +1,9 @@
 import {useEffect, useState} from 'react'
-import { Link } from '@tanstack/react-router'
-import { homeLink } from '../../constants/navigationLinks'
 import styles from './MobileHeader.module.scss'
+
 import {MobileMenu} from "../MobileMenu/MobileMenu.tsx";
+import {NavigationLink} from "../NavigationLink/NavigationLink.tsx";
+import {navigationLinks} from "../../constants/navigationLinks.ts";
 
 export function MobileHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -39,17 +40,14 @@ export function MobileHeader() {
             <div className={styles.left}>
                 <img
                     src="/icons/HeaderIcon.svg"
-                    alt=""
+                    alt="Логотип TipMinder"
                     className={styles.icon}
                 />
 
-                <Link
-                    to={homeLink.to}
-                    className={styles.link}
-                    activeProps={{ className: styles.active }}
-                >
-                    {homeLink.label}
-                </Link>
+                <NavigationLink
+                    to={navigationLinks.home.path}
+                    label={navigationLinks.home.label}
+                />
             </div>
 
             <button
@@ -62,7 +60,7 @@ export function MobileHeader() {
             >
                 <img
                     src="/icons/BurgerIcon.svg"
-                    alt=""
+                    alt="Иконка меню"
                 />
             </button>
         </header>

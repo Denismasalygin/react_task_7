@@ -6,6 +6,7 @@ import {
 } from '@tanstack/react-router'
 
 import {Header} from '../components/header/Header.tsx'
+import {navigationLinks} from "../components/header/constants/navigationLinks.ts";
 
 export const Route = createRootRoute({
     component: RootComponent,
@@ -17,7 +18,7 @@ function NotFoundRedirect() {
 
     useEffect(() => {
         void navigate({
-            to: '/',
+            to: navigationLinks.home.path,
             replace: true,
         })
     }, [navigate])

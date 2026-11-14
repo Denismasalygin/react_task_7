@@ -4,6 +4,7 @@ import { loginUser } from '../api/auth'
 import { LoginForm } from '../components/LoginForm/LoginForm'
 import { useAuth } from '../context/AuthContext/useAuth.ts'
 import type { AuthUser } from '../context/AuthContext/auth.types.ts'
+import {navigationLinks} from "../components/header/constants/navigationLinks.ts";
 
 function LoginPage() {
     const { login } = useAuth()
@@ -24,7 +25,7 @@ function LoginPage() {
 
             login(user, data.accessToken, data.refreshToken)
 
-            navigate({ to: '/' })
+            navigate({to: navigationLinks.home.path,})
         },
     })
 

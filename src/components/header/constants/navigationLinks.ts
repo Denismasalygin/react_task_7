@@ -2,33 +2,36 @@ import type { ToOptions } from '@tanstack/react-router'
 
 interface NavigationLink {
     label: string
-    to: ToOptions['to']
+    path: ToOptions['to']
 }
 
-export const homeLink: NavigationLink = {
-    label: 'TipMinder',
-    to: '/',
-}
-
-export const navigationLinks: NavigationLink[] = [
-    {
+export const navigationLinks = {
+    home: {
+        label: 'TipMinder',
+        path: '/',
+    },
+    about: {
         label: 'О нас',
-        to: '/about',
+        path: '/about',
     },
-    {
+    dashboard: {
         label: 'Общее состояние',
-        to: '/dashboard',
+        path: '/dashboard',
     },
-    {
+    priceList: {
         label: 'Прайс-лист',
-        to: '/price-list',
+        path: '/price-list',
     },
-    {
+    question: {
         label: 'Вопросы и ответы',
-        to: '/question',
+        path: '/question',
     },
-    {
+    contacts: {
         label: 'Контакты',
-        to: '/contacts',
+        path: '/contacts',
     },
-]
+    login: {
+        label: 'Войти',
+        path: '/login',
+    },
+} satisfies Record<string, NavigationLink>

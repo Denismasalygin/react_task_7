@@ -1,6 +1,6 @@
 import { AuthButton } from '../AuthButton/AuthButton'
 import { NavigationLink } from '../NavigationLink/NavigationLink'
-import { homeLink, navigationLinks } from '../../constants/navigationLinks'
+import { navigationLinks } from '../../constants/navigationLinks'
 import styles from './DesktopHeader.module.scss'
 
 export function DesktopHeader() {
@@ -9,23 +9,25 @@ export function DesktopHeader() {
             <div className={styles.left}>
                 <img
                     src="/icons/HeaderIcon.svg"
-                    alt=""
+                    alt="Логотип TipMinder"
                 />
 
                 <NavigationLink
-                    to={homeLink.to}
-                    label={homeLink.label}
+                    to={navigationLinks.home.path}
+                    label={navigationLinks.home.label}
                 />
             </div>
 
             <nav className={styles.center} aria-label="Основная навигация">
-                {navigationLinks.map(({ to, label }) => (
-                    <NavigationLink
-                        key={to}
-                        to={to}
-                        label={label}
-                    />
-                ))}
+                {Object.entries(navigationLinks)
+                    .filter(([key]) => key !== 'home' && key !== 'login')
+                    .map(([key, link]) => (
+                        <NavigationLink
+                            key={key}
+                            to={link.path}
+                            label={link.label}
+                        />
+                    ))}
             </nav>
 
             <div className={styles.right}>

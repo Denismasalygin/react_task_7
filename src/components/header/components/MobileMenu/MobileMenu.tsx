@@ -1,4 +1,4 @@
-import { homeLink, navigationLinks } from '../../constants/navigationLinks'
+import { navigationLinks } from '../../constants/navigationLinks'
 import { NavigationLink } from '../NavigationLink/NavigationLink'
 import { AuthButton } from '../AuthButton/AuthButton'
 
@@ -18,19 +18,21 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
                 onClick={(event) => event.stopPropagation()}
             >
                 <NavigationLink
-                    to={homeLink.to}
-                    label={homeLink.label}
+                    to={navigationLinks.home.path}
+                    label={navigationLinks.home.label}
                     onClick={onClose}
                 />
 
-                {navigationLinks.map(({ to, label }) => (
-                    <NavigationLink
-                        key={to}
-                        to={to}
-                        label={label}
-                        onClick={onClose}
-                    />
-                ))}
+                {Object.entries(navigationLinks)
+                    .filter(([key]) => key !== 'home' && key !== 'login')
+                    .map(([key, link]) => (
+                        <NavigationLink
+                            key={key}
+                            to={link.path}
+                            label={link.label}
+                            onClick={onClose}
+                        />
+                    ))}
 
                 <div className={styles.authButton}>
                     <AuthButton />
