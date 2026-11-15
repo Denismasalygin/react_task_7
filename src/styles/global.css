@@ -10,6 +10,7 @@
   --color-background: #FFFFFF;
   --color-background-hover: #FFF3E9;
   --color-background-overlay: rgba(0, 0, 0, 0.35);
+  --color-background-table-head: #fff1ec;
 
   /* Colors — border */
   --color-border: #C0C0C0;
@@ -18,8 +19,22 @@
   --color-link-hover: #FFB682;
   --color-link-active: #FB8F42;
 
+  /* Colors — links */
+  --color-table-statys-error-text: #DA3E52;
+  --color-table-statys-error-background: #FBECEE;
+  --color-table-statys-active-text: #048A81;
+  --color-table-statys-active-background: #FBECEE;
+  --color-table-statys-expired-text: #D73EDA;
+  --color-table-statys-expired-background: #F4ECFB;
+  --color-table-statys-suspended-text: #5F8A04;
+  --color-table-statys-suspended-background: #F3F8EC;
+
   /* Typography — font size */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
   --font-size-md: 16px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 30px;
 
   /* Typography — font family */
   --font-family-base: 'Inter', sans-serif;
@@ -59,3 +74,15 @@ select {
 button {
   cursor: pointer;
 }
+
+h1 {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xxl);
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+}
+
