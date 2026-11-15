@@ -2,9 +2,11 @@ import { useMutation } from '@tanstack/react-query'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { loginUser } from '../api/auth'
 import { LoginForm } from '../components/LoginForm/LoginForm'
-import { useAuth } from '../context/AuthContext/useAuth.ts'
-import type { AuthUser } from '../context/AuthContext/auth.types.ts'
-import {navigationLinks} from "../components/header/constants/navigationLinks.ts";
+import { useAuth } from '../context/AuthContext/useAuth'
+import type { AuthUser } from '../context/AuthContext/auth.types'
+import { navigationLinks } from '../components/header/constants/navigationLinks'
+
+import styles from './login.module.scss'
 
 function LoginPage() {
     const { login } = useAuth()
@@ -25,7 +27,7 @@ function LoginPage() {
 
             login(user, data.accessToken, data.refreshToken)
 
-            navigate({to: navigationLinks.home.path,})
+            void navigate({ to: navigationLinks.home.path })
         },
     })
 
@@ -35,11 +37,13 @@ function LoginPage() {
             : null
 
     return (
-        <LoginForm
-            onSubmit={(credentials) => loginMutation.mutate(credentials)}
-            isLoading={loginMutation.isPending}
-            error={errorMessage}
-        />
+        <div className={styles.page}>
+            <LoginForm
+                onSubmit={(credentials) => loginMutation.mutate(credentials)}
+                isLoading={loginMutation.isPending}
+                error={errorMessage}
+            />
+        </div>
     )
 }
 
