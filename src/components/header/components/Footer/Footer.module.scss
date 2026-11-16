@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 32px 27px;
+
+  background-color: var(--color-footer-background);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-md);
+}
+
+.logo {
+  font-family: var(--font-family-base), 'sans-serif';
+  font-weight: var(--font-weight-semibold);
+}
+
+.copyright {
+  font-family: var(--font-family-poppins), sans-serif;
+  font-weight: var(--font-weight-medium);
+}

@@ -1,0 +1,31 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.label {
+  color: var(--color-text-form-label);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.input {
+  width: 100%;
+  min-height: 54px;
+  padding: 15px 16px;
+  border: 2px solid var(--color-form-input-border);
+  border-radius: 10px;
+  font-size: var(--font-size-md);
+  outline: none;
+
+  &::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+  }
+
+  &:focus {
+    border-color: var(--color-link-active);
+  }
+}

@@ -7,6 +7,8 @@ import {
 
 import {Header} from '../components/header/Header.tsx'
 import {navigationLinks} from "../components/header/constants/navigationLinks.ts";
+import {Footer} from "../components/header/components/Footer/Footer.tsx";
+import styles from './__root.module.scss'
 
 export const Route = createRootRoute({
     component: RootComponent,
@@ -28,11 +30,14 @@ function NotFoundRedirect() {
 
 function RootComponent() {
     return (
-        <>
-            <Header />
-            <main>
-                <Outlet />
+        <div className={styles.app}>
+            <Header/>
+
+            <main className={styles.main}>
+                <Outlet/>
             </main>
-        </>
+
+            <Footer/>
+        </div>
     )
 }

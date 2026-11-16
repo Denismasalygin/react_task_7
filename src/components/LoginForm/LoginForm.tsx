@@ -1,9 +1,10 @@
-import {useState, type FormEvent} from 'react'
-import type {LoginFormProps} from "./LoginForm.types.ts";
-import {Input} from "../Input/Input.tsx";
-import {ErrorMessage} from "../ErrorMessage/ErrorMessage.tsx";
+import { useState, type FormEvent } from 'react'
+import type { LoginFormProps } from './LoginForm.types'
+import { Input } from '../Input/Input'
+import { ErrorMessage } from '../ErrorMessage/ErrorMessage'
+import styles from './LoginForm.module.scss'
 
-export function LoginForm({onSubmit, isLoading, error}: LoginFormProps) {
+export function LoginForm({ onSubmit, isLoading, error }: LoginFormProps) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
@@ -14,8 +15,8 @@ export function LoginForm({onSubmit, isLoading, error}: LoginFormProps) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h1>Вход в аккаунт</h1>
+        <form className={styles.form} onSubmit={handleSubmit}>
+            <h1 className={styles.title}>Вход в аккаунт</h1>
 
             <Input
                 id="username"
@@ -39,7 +40,11 @@ export function LoginForm({onSubmit, isLoading, error}: LoginFormProps) {
 
             <ErrorMessage message={error} />
 
-            <button type="submit" disabled={isLoading}>
+            <button
+                className={styles.submitButton}
+                type="submit"
+                disabled={isLoading}
+            >
                 {isLoading ? 'Выполняется вход...' : 'Войти'}
             </button>
         </form>
