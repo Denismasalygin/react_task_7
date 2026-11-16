@@ -1,10 +1,12 @@
 import { useState, type ChangeEvent } from 'react'
 import { useQuery, keepPreviousData } from '@tanstack/react-query'
-import { CardStatus, type Card } from '../../api/Card/card.types.ts'
 import { getCards } from '../../api/Card/cards.ts'
 import { Loader } from '../Loader/Loader'
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage.tsx'
 import { CardsTableView } from './CardsTableView'
+import { CardStatus } from '../../api/Card/card.types.ts'
+import type { Card } from '../../api/Card/card.types.ts'
+import {CardsTableProvider} from "./Context/CardsTableProvider.tsx";
 
 export function CardsTable() {
     const [page, setPage] = useState(0)
@@ -87,18 +89,21 @@ export function CardsTable() {
     }
 
     return (
-        <CardsTableView
-            cards={cards}
-            page={page}
-            pageSize={pageSize}
-            totalPages={totalPages}
-            isFetching={isFetching}
-            getCardStatus={getCardStatus}
-            onBlockCard={handleBlockCard}
-            onFreezeCard={handleFreezeCard}
-            onPreviousPage={handlePreviousPage}
-            onNextPage={handleNextPage}
-            onPageSizeChange={handlePageSizeChange}
-        />
+        <CardsTableProvider
+            value={{
+                page,
+                pageSize,
+                totalPages,
+                isFetching,
+                onPreviousPage: handlePreviousPage,
+                onNextPage: handleNextPage,
+                onPageSizeChange: handlePageSizeChange,
+                getCardStatus,
+                onBlockCard: handleBlockCard,
+                onFreezeCard: handleFreezeCard,
+            }}
+        >
+            <CardsTableView cards={cards}/>
+        </CardsTableProvider>
     )
 }

@@ -1,22 +1,24 @@
 import clsx from 'clsx'
-import styles from './CardsTable.module.scss'
+import styles from './Style/CardsTable.module.scss'
 import { CardStatus, type Card } from '../../api/Card/card.types.ts'
+import {useCardsTable} from "./Hooks/useCardsTable.ts";
 
 interface CardRowProps {
     card: Card
     index: number
-    status: CardStatus
-    onBlock: (cardId: number) => void
-    onFreeze: (cardId: number) => void
 }
 
-export function CardRow({card, index, status, onBlock, onFreeze}: CardRowProps) {
+export function CardRow({ card, index }: CardRowProps) {
+    const {getCardStatus, onBlockCard, onFreezeCard} = useCardsTable()
+
+    const status = getCardStatus(card)
+
     const handleBlock = () => {
-        onBlock(card.id)
+        onBlockCard(card.id)
     }
 
     const handleFreeze = () => {
-        onFreeze(card.id)
+        onFreezeCard(card.id)
     }
 
     return (

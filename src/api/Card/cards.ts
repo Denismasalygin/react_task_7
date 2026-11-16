@@ -3,12 +3,7 @@ import { CardStatus } from './card.types.ts'
 
 const CARDS_URL = '/api/users'
 
-const statuses: CardStatus[] = [
-    CardStatus.ACTIVE,
-    CardStatus.ERROR,
-    CardStatus.EXPIRED,
-    CardStatus.SUSPENDED,
-]
+const statuses = Object.values(CardStatus)
 
 export async function getCards({limit, skip}: GetCardsParams): Promise<GetCardsResult> {
     const response = await fetch(
