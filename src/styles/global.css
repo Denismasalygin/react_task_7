@@ -5,6 +5,7 @@
   --color-text-inverse: #FFFFFF;
   --color-text-primary: #121212;
   --color-text-secondary: #2C2C2C;
+  --color-text-form-label: #414141;
 
   /* Colors — background */
   --color-background: #FFFFFF;
@@ -13,16 +14,27 @@
 
   /* Colors — border */
   --color-border: #C0C0C0;
+  --color-form-border: #D6D6D6;
+  --color-form-input-border: #D6D6D6;
 
   /* Colors — links */
   --color-link-hover: #FFB682;
   --color-link-active: #FB8F42;
 
+  /* Colors — buttons */
+  --color-button: #FB8F42;
+  --color-button-hover: #FFB682;
+  --color-button-active: #E8792D;
+
   /* Typography — font size */
+  --font-size-sm: 14px;
   --font-size-md: 16px;
+  --font-size-lg: 24px;
 
   /* Typography — font family */
   --font-family-base: 'Inter', sans-serif;
+  --font-family-montserrat: 'Montserrat', sans-serif;
+  --font-family-poppins: 'Poppins', sans-serif;
 
   /* Typography — font weight */
   --font-weight-semibold: 600;
