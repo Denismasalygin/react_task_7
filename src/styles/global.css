@@ -44,9 +44,9 @@
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-md: 16px;
-  --font-size-xl: 24px;
-  --font-size-xxl: 30px;
   --font-size-lg: 24px;
+  --font-size-xxl: 30px;
+
 
   /* Typography — font family */
   --font-family-base: 'Inter', sans-serif;
@@ -96,7 +96,7 @@ h1 {
 
 @media (max-width: 850px) {
   h1 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
   }
 }
 
