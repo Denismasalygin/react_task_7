@@ -5,6 +5,8 @@ import {TransactionsTable} from "../components/AccountDetails/TransactionsTable/
 import ExpensesChart from "../components/AccountDetails/ExpensesChart/ExpensesChart.tsx";
 import {useTransactions} from "../api/Transaction/hooks/useTransactions.ts";
 import styles from './about.module.scss'
+import {AccountSummaryCards} from "../components/AccountDetails/AccountSummaryCards/AccountSummaryCards.tsx";
+import {accountSummaryItems} from "../components/AccountDetails/AccountSummaryCards/Constants/accountSummary.ts";
 
 function AboutPage() {
     const { user, isAuthenticated } = useAuth();
@@ -43,13 +45,17 @@ function AboutPage() {
             <h1 className={styles.title}>Детали счёта</h1>
 
             <div className={styles.content}>
-                <section className={styles.chart}>
-                    <ExpensesChart transactions={data} />
-                </section>
+                <AccountSummaryCards items={accountSummaryItems}/>
 
-                <section className={styles.table}>
-                    <TransactionsTable transactions={data} />
-                </section>
+                <div className={styles.contentGrid}>
+                    <section className={styles.chart}>
+                        <ExpensesChart transactions={data}/>
+                    </section>
+
+                    <section className={styles.table}>
+                        <TransactionsTable transactions={data}/>
+                    </section>
+                </div>
             </div>
         </main>
     )

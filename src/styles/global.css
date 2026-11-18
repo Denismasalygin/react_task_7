@@ -9,6 +9,8 @@
   --color-text-chart-header: #6B6B6B;
   --color-button-text-chart: #414141;
   --color-chart-empty-message: #414141;
+  --color-card-label: #959595;
+  --color-card-title: #474747;
 
   /* Colors — background */
   --color-background: #FFFFFF;
@@ -22,10 +24,12 @@
   --color-form-border: #D6D6D6;
   --color-form-input-border: #D6D6D6;
   --color-table-border: #D6D6D6;
+  --color-card-border: #D6D6D6;
 
   /* Colors — links */
   --color-link-hover: #FFB682;
   --color-link-active: #FB8F42;
+  --color-link-card: #FB8F42;
 
   /* Colors — buttons */
   --color-button: #FB8F42;
