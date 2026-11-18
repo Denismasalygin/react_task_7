@@ -1,4 +1,4 @@
-import type {AuthResponse, LoginCredentials} from './auth.types'
+import type {AuthResponse, LoginCredentials} from './auth.types.ts'
 
 const AUTH_URL = 'https://dummyjson.com/auth/login'
 
