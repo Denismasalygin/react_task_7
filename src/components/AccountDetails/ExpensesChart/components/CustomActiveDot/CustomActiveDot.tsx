@@ -29,7 +29,7 @@ export function CustomActiveDot({cx, cy, value, payload}: ActiveDotProps) {
                 x1={0}
                 x2={0}
                 y1={0}
-                y2={300 - cy}
+                y2={500 - cy}
                 stroke="#F29B38"
                 strokeWidth={1}
                 opacity={0.8}

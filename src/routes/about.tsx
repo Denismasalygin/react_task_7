@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext/useAuth.ts'
 import {TransactionsTable} from "../components/AccountDetails/TransactionsTable/TransactionsTable.tsx";
 import ExpensesChart from "../components/AccountDetails/ExpensesChart/ExpensesChart.tsx";
 import {useTransactions} from "../api/Transaction/hooks/useTransactions.ts";
+import styles from './about.module.scss'
 
 function AboutPage() {
     const { user, isAuthenticated } = useAuth();
@@ -38,16 +39,18 @@ function AboutPage() {
     }
 
     return (
-        <main>
-            <h1>Детали счёта</h1>
+        <main className={styles.dashboard}>
+            <h1 className={styles.title}>Детали счёта</h1>
 
-            <section>
-                <ExpensesChart transactions={data} />
-            </section>
+            <div className={styles.content}>
+                <section className={styles.chart}>
+                    <ExpensesChart transactions={data} />
+                </section>
 
-            <section>
-                <TransactionsTable transactions={data} />
-            </section>
+                <section className={styles.table}>
+                    <TransactionsTable transactions={data} />
+                </section>
+            </div>
         </main>
     )
 }

@@ -3,7 +3,7 @@ import {createRandomGenerator} from "./utils/createRandomGenerator.ts";
 import {getRandomDate} from "./utils/getRandomDate.ts";
 import {getCountries} from "../Countries/getCountries.ts";
 
-const TRANSACTIONS_COUNT = 60
+const TRANSACTIONS_COUNT = 30
 
 export async function getTransactions(
     userId: number,
