@@ -24,7 +24,7 @@ export function CustomActiveDot({cx, cy, value, payload}: ActiveDotProps) {
             }}
             transform={`translate(${cx}, ${cy})`}
         >
-            {/* Вертикальная линия */}
+
             <line
                 x1={0}
                 x2={0}
@@ -35,7 +35,6 @@ export function CustomActiveDot({cx, cy, value, payload}: ActiveDotProps) {
                 opacity={0.8}
             />
 
-            {/* Маркер */}
             <circle
                 cx={0}
                 cy={0}
@@ -45,7 +44,6 @@ export function CustomActiveDot({cx, cy, value, payload}: ActiveDotProps) {
                 strokeWidth={2}
             />
 
-            {/* Окошко с суммой */}
             <rect
                 x={12}
                 y={-42}

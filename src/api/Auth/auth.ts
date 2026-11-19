@@ -1,6 +1,6 @@
 import type {AuthResponse, LoginCredentials} from './auth.types.ts'
 
-const AUTH_URL = 'https://dummyjson.com/auth/login'
+const AUTH_URL = import.meta.env.VITE_AUTH_URL;
 
 export async function loginUser(credentials: LoginCredentials): Promise<AuthResponse> {
     const response = await fetch(AUTH_URL, {
