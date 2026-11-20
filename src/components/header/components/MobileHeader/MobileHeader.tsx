@@ -39,7 +39,7 @@ export function MobileHeader() {
         <header className={styles.header}>
             <div className={styles.left}>
                 <img
-                    src="/icons/HeaderIcon.svg"
+                    src={`${import.meta.env.BASE_URL}icons/HeaderIcon.svg`}
                     alt="Логотип TipMinder"
                     className={styles.icon}
                 />
@@ -59,7 +59,7 @@ export function MobileHeader() {
                 aria-controls="mobile-navigation"
             >
                 <img
-                    src="/icons/BurgerIcon.svg"
+                    src={`${import.meta.env.BASE_URL}icons/BurgerIcon.svg`}
                     alt="Иконка меню"
                 />
             </button>

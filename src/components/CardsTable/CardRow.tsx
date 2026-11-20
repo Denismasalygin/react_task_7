@@ -46,7 +46,7 @@ export function CardRow({ card, index }: CardRowProps) {
                         aria-label="Заблокировать карту"
                         onClick={handleBlock}
                     >
-                        <img src="/icons/lock.svg" alt="" />
+                        <img src={`${import.meta.env.BASE_URL}icons/lock.svg`} alt="" />
                     </button>
 
                     <button
@@ -56,7 +56,7 @@ export function CardRow({ card, index }: CardRowProps) {
                         aria-label="Заморозить карту"
                         onClick={handleFreeze}
                     >
-                        <img src="/icons/freeze.svg" alt="" />
+                        <img src={`${import.meta.env.BASE_URL}icons/freeze.svg`}alt="" />
                     </button>
                 </div>
             </td>

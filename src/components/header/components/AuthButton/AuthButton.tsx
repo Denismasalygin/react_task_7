@@ -24,7 +24,7 @@ export function AuthButton() {
             className={styles.authButton}
         >
             <img
-                src="/icons/PersonIcon.svg"
+                src={`${import.meta.env.BASE_URL}icons/PersonIcon.svg`}
                 alt="Иконка пользователя"
             />
             <span className={styles.verticalLine}></span>

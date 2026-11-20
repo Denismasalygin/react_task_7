@@ -8,7 +8,7 @@ export function DesktopHeader() {
         <header className={styles.navigation}>
             <div className={styles.left}>
                 <img
-                    src="/icons/HeaderIcon.svg"
+                    src={`${import.meta.env.BASE_URL}icons/HeaderIcon.svg`}
                     alt="Логотип TipMinder"
                 />
 

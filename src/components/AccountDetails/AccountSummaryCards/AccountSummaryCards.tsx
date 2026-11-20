@@ -17,7 +17,7 @@ export function AccountSummaryCards({ items }: AccountSummaryCardsProps) {
                     <span className={styles.action}>
                         {item.action}
                         <img
-                            src="/icons/Arrow.svg"
+                            src={`${import.meta.env.BASE_URL}icons/Arrow.svg`}
                             alt="Иконка стрелоки"
                         />
                     </span>
