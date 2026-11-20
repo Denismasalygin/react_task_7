@@ -4,6 +4,8 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  base: '/react_task_7/',
+
   plugins: [
     tanstackRouter({
       target: 'react',
