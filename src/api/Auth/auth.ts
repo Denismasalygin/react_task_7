@@ -1,0 +1,22 @@
+import type {AuthResponse, LoginCredentials} from './auth.types.ts'
+
+const AUTH_URL = import.meta.env.VITE_AUTH_URL;
+
+export async function loginUser(credentials: LoginCredentials): Promise<AuthResponse> {
+    const response = await fetch(AUTH_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            ...credentials,
+            expiresInMins: 30,
+        }),
+    })
+
+    if (!response.ok) {
+        throw new Error('Неверный логин или пароль')
+    }
+
+    return await response.json()
+}

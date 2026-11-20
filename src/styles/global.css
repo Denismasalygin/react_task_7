@@ -5,25 +5,62 @@
   --color-text-inverse: #FFFFFF;
   --color-text-primary: #121212;
   --color-text-secondary: #2C2C2C;
+  --color-text-form-label: #414141;
+  --color-text-chart-header: #6B6B6B;
+  --color-button-text-chart: #414141;
+  --color-chart-empty-message: #414141;
+  --color-card-label: #959595;
+  --color-card-title: #474747;
 
   /* Colors — background */
   --color-background: #FFFFFF;
   --color-background-hover: #FFF3E9;
   --color-background-overlay: rgba(0, 0, 0, 0.35);
+  --color-background-table-head: #fff1ec;
+  --color-background-table-line: #F9F9F9;
   --color-footer-background: #4D4D4D;
+  --color-about-content: #FAFAFA;
 
   /* Colors — border */
   --color-border: #C0C0C0;
+  --color-border-table: #D6D6D6;
+  --color-form-border: #D6D6D6;
+  --color-form-input-border: #D6D6D6;
+  --color-table-border: #D6D6D6;
+  --color-card-border: #D6D6D6;
 
   /* Colors — links */
   --color-link-hover: #FFB682;
   --color-link-active: #FB8F42;
+  --color-link-card: #FB8F42;
+
+  /* Colors — buttons */
+  --color-button: #FB8F42;
+  --color-button-hover: #FFB682;
+  --color-button-active: #E8792D;
+
+  /* Colors — links */
+  --color-table-statys-error-text: #DA3E52;
+  --color-table-statys-error-background: #FBECEE;
+  --color-table-statys-active-text: #048A81;
+  --color-table-statys-active-background: #ECF8F7;
+  --color-table-statys-expired-text: #D73EDA;
+  --color-table-statys-expired-background: #F4ECFB;
+  --color-table-statys-suspended-text: #5F8A04;
+  --color-table-statys-suspended-background: #F3F8EC;
 
   /* Typography — font size */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
   --font-size-md: 16px;
+  --font-size-l: 20px;
+  --font-size-lg: 24px;
+  --font-size-xxl: 30px;
+
 
   /* Typography — font family */
   --font-family-base: 'Inter', sans-serif;
+  --font-family-montserrat: 'Montserrat', sans-serif;
   --font-family-poppins: 'Poppins', sans-serif;
 
   /* Typography — font weight */
@@ -61,3 +98,15 @@ select {
 button {
   cursor: pointer;
 }
+
+h1 {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xxl);
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: var(--font-size-lg);
+  }
+}
+
