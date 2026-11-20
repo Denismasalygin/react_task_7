@@ -11,7 +11,7 @@ export const navigationLinks = {
         path: '/',
     },
     about: {
-        label: 'О нас',
+        label: 'О счёте',
         path: '/about',
     },
     dashboard: {

@@ -1,4 +1,4 @@
-import type {LoginCredentials} from "../../api/auth.types.ts";
+import type {LoginCredentials} from "../../api/Auth/auth.types.ts";
 
 export interface LoginFormProps {
     onSubmit: (credentials: LoginCredentials) => void

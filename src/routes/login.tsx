@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
-import { loginUser } from '../api/auth'
+import { loginUser } from '../api/Auth/auth.ts'
 import { LoginForm } from '../components/LoginForm/LoginForm'
 import { useAuth } from '../context/AuthContext/useAuth'
 import type { AuthUser } from '../context/AuthContext/auth.types'

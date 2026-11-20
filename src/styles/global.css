@@ -6,6 +6,11 @@
   --color-text-primary: #121212;
   --color-text-secondary: #2C2C2C;
   --color-text-form-label: #414141;
+  --color-text-chart-header: #6B6B6B;
+  --color-button-text-chart: #414141;
+  --color-chart-empty-message: #414141;
+  --color-card-label: #959595;
+  --color-card-title: #474747;
 
   /* Colors — background */
   --color-background: #FFFFFF;
@@ -14,16 +19,20 @@
   --color-background-table-head: #fff1ec;
   --color-background-table-line: #F9F9F9;
   --color-footer-background: #4D4D4D;
+  --color-about-content: #FAFAFA;
 
   /* Colors — border */
   --color-border: #C0C0C0;
   --color-border-table: #D6D6D6;
   --color-form-border: #D6D6D6;
   --color-form-input-border: #D6D6D6;
+  --color-table-border: #D6D6D6;
+  --color-card-border: #D6D6D6;
 
   /* Colors — links */
   --color-link-hover: #FFB682;
   --color-link-active: #FB8F42;
+  --color-link-card: #FB8F42;
 
   /* Colors — buttons */
   --color-button: #FB8F42;
@@ -44,6 +53,7 @@
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-md: 16px;
+  --font-size-l: 20px;
   --font-size-lg: 24px;
   --font-size-xxl: 30px;
 
