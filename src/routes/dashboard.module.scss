@@ -1,0 +1,14 @@
+.Dashboard{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.DashboardName {
+  color: var(--color-text-secondary);
+  margin: 32px 0;
+}
