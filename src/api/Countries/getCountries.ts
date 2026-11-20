@@ -1,6 +1,6 @@
 import type {UsersResponse} from "./Countries.types.ts";
 
-const USERS_URL = 'https://dummyjson.com/users';
+const USERS_URL = import.meta.env.VITE_USERS_URL;
 
 export async function getCountries(): Promise<string[]> {
     const response = await fetch(
