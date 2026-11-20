@@ -1,7 +1,7 @@
 import type {CardsResponse, GetCardsParams, GetCardsResult} from './card.types.ts'
 import { CardStatus } from './card.types.ts'
 
-const CARDS_URL = import.meta.env.API_USERS_URL;
+const CARDS_URL = import.meta.env.VITE_API_USERS_URL;
 
 const statuses = Object.values(CardStatus)
 
