@@ -1,7 +1,6 @@
 import {formatAmount} from "../../utils/formatAmount.ts";
 import type {ActiveDotProps} from "./ActiveDotProps.types.ts";
 
-
 export function CustomActiveDot({cx, cy, value, payload}: ActiveDotProps) {
     const amount = payload?.amount ?? value;
 
